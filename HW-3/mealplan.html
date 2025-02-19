@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Meal Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mealplan.css">
+</head>
+<body>
+    <header>
+        <h1>Campus Culinary Guide</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="mealplan.html">Create Meal Plan</a>
+        </nav>
+    </header>
+
+    <main class="meal-plan">
+        <section class="menu-list">
+            <h2>Available Dishes</h2>
+            <div class="menu-items">
+                <div class="menu-category">
+                    <h3>Pizza Paradise</h3>
+                    <div class="menu-item" data-price="12.99" data-description="Classic Italian pizza with fresh basil and mozzarella.">Margherita Pizza</div>
+                    <div class="menu-item" data-price="14.99" data-description="A loaded pizza with pepperoni, sausage, mushrooms, and olives.">Supreme Pizza</div>
+                    <div class="menu-item" data-price="13.99" data-description="A creamy white sauce pizza topped with ricotta and garlic.">White Pizza</div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Sushi Station</h3>
+                    <div class="menu-item" data-price="15.99">Salmon Roll</div>
+                    <div class="menu-item" data-price="16.99">Dragon Roll</div>
+                    <div class="menu-item" data-price="14.99">Spicy Tuna Roll</div>
+                </div>
+                
+                <div class="menu-category">
+                    <h3>Burger Bistro</h3>
+                    <div class="menu-item" data-price="11.99">Classic Burger</div>
+                    <div class="menu-item" data-price="13.99">Bacon Burger</div>
+                    <div class="menu-item" data-price="12.99">Veggie Burger</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="selected-meals">
+            <h2>Your Meal Plan</h2>
+            <div class="meal-list"></div>
+            <div class="total">
+                <h3>Total: $<span class="total-amount">0.00</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

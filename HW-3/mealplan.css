@@ -1,0 +1,158 @@
+/* Meal Plan Page Layout */
+.meal-plan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu List Styles */
+.menu-list, .selected-meals {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category {
+    margin-bottom: 2rem;
+}
+
+.menu-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--background-color);
+}
+
+.menu-item {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Selected Meals Styles */
+.meal-list {
+    min-height: 200px;
+    margin-bottom: 2rem;
+}
+
+.selected-meal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    animation: slideIn 0.3s ease;
+}
+
+.meal-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.quantity-control, .remove-meal {
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quantity-control {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.quantity-control:hover {
+    background-color: var(--primary-color);
+}
+
+.remove-meal {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.remove-meal:hover {
+    background-color: #c0392b;
+}
+
+.total {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--background-color);
+}
+
+.total h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .meal-plan {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-list, .selected-meals {
+        margin-bottom: 2rem;
+    }
+    
+    .selected-meal {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .meal-controls {
+        justify-content: center;
+    }
+}
+
+/* Additional Interactive Elements */
+.menu-item.selected {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Price Display */
+.price-display {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+}

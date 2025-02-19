@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #f5f6fa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.restaurant {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dish-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.dish {
+    flex: 0 1 calc(33.333% - 1rem);
+    text-align: center;
+    cursor: pointer;
+}
+
+.dish img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.dish.active img {
+    transform: scale(1.1);
+}
+
+.dish-description {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: none;
+}
+
+.dish-description.visible {
+    display: block;
+}
+
+aside {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .dish {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .dish {
+        flex: 0 1 100%;
+    }
+}
+
+.dish img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish img:hover {
+    transform: scale(1.5);  /* Enlarges image on hover */
+}
