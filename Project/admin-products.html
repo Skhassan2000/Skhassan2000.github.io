@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Products - KitchenPro</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <a href="index.html" class="admin-logo">KitchenPro Admin</a>
+            <ul class="admin-nav">
+                <li><a href="admin-products.html" class="active">Product Management</a></li>
+                <li><a href="admin-upload.html">Bulk Upload</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-header">
+                <h1 class="admin-title">Product Management</h1>
+                <p>View, edit, and manage all products in your store</p>
+            </div>
+            
+            <button class="add-new-btn">Add New Product</button>
+            
+            <div class="admin-card">
+                <div class="admin-search">
+                    <input type="text" placeholder="Search products by name, category, or ID...">
+                    <button>Search</button>
+                </div>
+                
+                <div style="display: flex; margin-bottom: 1rem;">
+                    <select style="padding: 0.75rem; margin-right: 1rem; border: 1px solid #ddd; border-radius: 4px;">
+                        <option>All Categories</option>
+                        <option>Refrigerators</option>
+                        <option>Ovens & Ranges</option>
+                        <option>Dishwashers</option>
+                        <option>Small Appliances</option>
+                    </select>
+                    
+                    <select style="padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px;">
+                        <option>Sort by: Newest</option>
+                        <option>Sort by: Price (Low to High)</option>
+                        <option>Sort by: Price (High to Low)</option>
+                        <option>Sort by: Name (A to Z)</option>
+                    </select>
+                </div>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PRD001</td>
+                            <td><img src="Refrigerator.png" alt="Refrigerator" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>Samsung French Door Refrigerator</td>
+                            <td>Refrigerators</td>
+                            <td>$1,999.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRD002</td>
+                            <td><img src="Oven.png" alt="Oven" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>LG Electric Range</td>
+                            <td>Ovens & Ranges</td>
+                            <td>$899.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRD003</td>
+                            <td><img src="Dishwasher.png" alt="Dishwasher" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>Whirlpool Smart Dishwasher</td>
+                            <td>Dishwashers</td>
+                            <td>$699.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRD004</td>
+                            <td><img src="Blender.png" alt="Blender" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>KitchenAid Professional Blender</td>
+                            <td>Small Appliances</td>
+                            <td>$299.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRD005</td>
+                            <td><img src="Microwave.png" alt="Microwave" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>Samsung Countertop Microwave</td>
+                            <td>Small Appliances</td>
+                            <td>$199.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PRD006</td>
+                            <td><img src="Coffee.png" alt="Coffee Maker" style="width: 50px; height: 50px; object-fit: contain;"></td>
+                            <td>Cuisinart Coffee Maker</td>
+                            <td>Small Appliances</td>
+                            <td>$129.00</td>
+                            <td class="admin-actions">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+                    <button style="padding: 0.5rem 1rem; background: #f8f9fa; border: 1px solid #ddd; margin: 0 0.25rem; border-radius: 4px;">&laquo; Previous</button>
+                    <button style="padding: 0.5rem 1rem; background: #2c3e50; color: white; border: 1px solid #2c3e50; margin: 0 0.25rem; border-radius: 4px;">1</button>
+                    <button style="padding: 0.5rem 1rem; background: #f8f9fa; border: 1px solid #ddd; margin: 0 0.25rem; border-radius: 4px;">2</button>
+                    <button style="padding: 0.5rem 1rem; background: #f8f9fa; border: 1px solid #ddd; margin: 0 0.25rem; border-radius: 4px;">3</button>
+                    <button style="padding: 0.5rem 1rem; background: #f8f9fa; border: 1px solid #ddd; margin: 0 0.25rem; border-radius: 4px;">Next &raquo;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

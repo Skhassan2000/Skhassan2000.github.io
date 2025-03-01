@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - KitchenPro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cart-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .cart-title {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .cart-items {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 2fr 1fr 1fr 100px;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .item-name {
+            padding: 0 1rem;
+        }
+        
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .item-quantity {
+            display: flex;
+            align-items: center;
+        }
+        
+        .item-quantity input {
+            width: 60px;
+            padding: 0.5rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 0.5rem;
+        }
+        
+        .remove-item {
+            color: white;
+            background: #e74c3c;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .remove-item:hover {
+            background: #c0392b;
+        }
+        
+        .cart-summary {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        
+        .summary-row.total {
+            border-top: 2px solid #ddd;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .checkout-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 1rem;
+            width: 100%;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        
+        .checkout-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">KitchenPro</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for kitchen appliances...">
+                <button>Search</button>
+            </div>
+            <div class="nav-links">
+                <a href="products.html">Categories</a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a href="#"><i class="fas fa-user"></i> Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h1 class="cart-title">Your Shopping Cart</h1>
+        
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="Refrigerator.png" alt="Samsung French Door Refrigerator">
+                <div class="item-name">
+                    <h3>Samsung French Door Refrigerator</h3>
+                </div>
+                <div class="item-price">$1,999.00</div>
+                <div class="item-quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <button class="remove-item">Remove</button>
+            </div>
+            
+            <div class="cart-item">
+                <img src="Blender.png" alt="KitchenAid Professional Blender">
+                <div class="item-name">
+                    <h3>KitchenAid Professional Blender</h3>
+                </div>
+                <div class="item-price">$299.00</div>
+                <div class="item-quantity">
+                    <input type="number" value="2" min="1">
+                </div>
+                <button class="remove-item">Remove</button>
+            </div>
+            
+            <div class="cart-item">
+                <img src="Dishwasher.png" alt="Whirlpool Smart Dishwasher">
+                <div class="item-name">
+                    <h3>Whirlpool Smart Dishwasher</h3>
+                </div>
+                <div class="item-price">$699.00</div>
+                <div class="item-quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <button class="remove-item">Remove</button>
+            </div>
+        </div>
+        
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Samsung French Door Refrigerator (1)</span>
+                <span>$1,999.00</span>
+            </div>
+            <div class="summary-row">
+                <span>KitchenAid Professional Blender (2)</span>
+                <span>$598.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Whirlpool Smart Dishwasher (1)</span>
+                <span>$699.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>$3,296.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (6.75%)</span>
+                <span>$222.48</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <span>$50.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>$3,568.48</span>
+            </div>
+            
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 KitchenPro. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>

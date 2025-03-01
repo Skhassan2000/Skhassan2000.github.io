@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - KitchenPro</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <a href="index.html" class="admin-logo">KitchenPro Admin</a>
+            <ul class="admin-nav">
+                <li><a href="admin-products.html" class="active">Product Management</a></li>
+                <li><a href="admin-upload.html">Bulk Upload</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </div>
+        
+        <div class="admin-content">
+            <div class="admin-header">
+                <h1 class="admin-title">Edit Product</h1>
+                <p>Update product information and settings</p>
+            </div>
+            
+            <div class="admin-card">
+                <form class="admin-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div>
+                            <label for="product-id">Product ID (not editable):</label>
+                            <input type="text" id="product-id" value="PRD001" disabled>
+                            
+                            <label for="product-name">Product Name:</label>
+                            <input type="text" id="product-name" value="Samsung French Door Refrigerator">
+                            
+                            <label for="product-price">Price ($):</label>
+                            <input type="number" id="product-price" value="1999.00" step="0.01">
+                            
+                            <label for="product-category">Category:</label>
+                            <select id="product-category">
+                                <option selected>Refrigerators</option>
+                                <option>Ovens & Ranges</option>
+                                <option>Dishwashers</option>
+                                <option>Small Appliances</option>
+                            </select>
+                            
+                            <label for="product-image">Image Path:</label>
+                            <input type="text" id="product-image" value="images/Refrigerator.png">
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <p>Current Image Preview:</p>
+                                <img src="Refrigerator.png" alt="Product preview" style="max-width: 100px; max-height: 100px; object-fit: contain; margin-top: 0.5rem; border: 1px solid #ddd; padding: 0.5rem;">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="product-description">Description:</label>
+                            <textarea id="product-description" rows="6">This premium French door refrigerator features advanced cooling technology, spacious storage, and energy-efficient operation. Perfect for modern kitchens with its sleek design and innovative features.</textarea>
+                            
+                            <label for="product-specs">Specifications (one per line):</label>
+                            <textarea id="product-specs" rows="6">Capacity: 25 cu. ft.
+Color: Stainless Steel
+Energy Star: Yes
+Warranty: 2 Years
+Dimensions: 36" x 70" x 35"
+Ice Maker: Built-in</textarea>
+                            
+                            <label for="product-status">Status:</label>
+                            <select id="product-status">
+                                <option selected>Active</option>
+                                <option>Archived</option>
+                                <option>Out of Stock</option>
+                                <option>Coming Soon</option>
+                            </select>
+                            
+                            <label for="product-featured">Featured Product:</label>
+                            <select id="product-featured">
+                                <option selected>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <button type="submit" style="background: #2ecc71;">Save Changes</button>
+                        <button type="button" style="background: #95a5a6;">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
