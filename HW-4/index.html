@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set and responsive viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the game interface -->
+    <div class="container">
+        <!-- Game title -->
+        <h1>Rock Paper Scissors</h1>
+        
+        <!-- PLAYER CHOICE SECTION -->
+        <section id="player-section">
+            <h2>Your Choice</h2>
+            <!-- Container for the three player choice options -->
+            <div class="choices">
+                <!-- Rock option -->
+                <figure id="rock" class="choice">
+                    <img src="rock.PNG" alt="Rock">
+                    <figcaption>Rock</figcaption>
+                </figure>
+                <!-- Paper option -->
+                <figure id="paper" class="choice">
+                    <img src="paper.PNG" alt="Paper">
+                    <figcaption>Paper</figcaption>
+                </figure>
+                <!-- Scissors option -->
+                <figure id="scissors" class="choice">
+                    <img src="scissors.PNG" alt="Scissors">
+                    <figcaption>Scissors</figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <!-- COMPUTER CHOICE SECTION -->
+        <section id="computer-section">
+            <h2>Computer's Choice</h2>
+            <!-- Container for displaying computer's choice -->
+            <figure id="computer-choice">
+                <!-- This image will be dynamically replaced during gameplay -->
+                <img src="question-mark.PNG" alt="Computer choice" id="computer-img">
+                <!-- This caption will be updated during gameplay -->
+                <figcaption id="computer-caption">Computer is waiting...</figcaption>
+            </figure>
+        </section>
+        
+        <!-- GAME RESULT SECTION -->
+        <section id="outcome-section">
+            <h2>Result</h2>
+            <!-- Text display for game result (win/lose/tie) -->
+            <p id="result-text">Make your choice to start the game!</p>
+        </section>
+        
+        <!-- SCORE TRACKING SECTION -->
+        <section id="score-section">
+            <h2>Score</h2>
+            <!-- Container for score statistics -->
+            <div class="scores">
+                <!-- Win counter -->
+                <div class="score-item">
+                    <p>Wins: <span id="wins">0</span></p>
+                </div>
+                <!-- Loss counter -->
+                <div class="score-item">
+                    <p>Losses: <span id="losses">0</span></p>
+                </div>
+                <!-- Tie counter -->
+                <div class="score-item">
+                    <p>Ties: <span id="ties">0</span></p>
+                </div>
+            </div>
+            <!-- Button to reset all scores -->
+            <button id="reset-btn">Reset Game</button>
+        </section>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="game.js"></script>
+</body>
+</html>
