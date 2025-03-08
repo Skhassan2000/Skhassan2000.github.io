@@ -92,7 +92,7 @@ function shuffleComputerChoice() {
             
             // Make the final random choice
             computerChoice = getRandomChoice();
-            computerImg.src = `${computerChoice}.png`;
+            computerImg.src = `${computerChoice}.PNG`;
             computerCaption.textContent = `Computer chose ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
             
             // Determine the winner
