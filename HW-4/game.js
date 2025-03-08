@@ -81,7 +81,7 @@ function shuffleComputerChoice() {
     shuffleInterval = setInterval(() => {
         // Get a random choice for the shuffle animation
         const randomChoice = options[Math.floor(Math.random() * 3)];
-        computerImg.src = `${randomChoice}.png`;
+        computerImg.src = `${randomChoice}.PNG`;
         computerCaption.textContent = 'Thinking...';
         
         // Check if we've reached the 3-second mark
