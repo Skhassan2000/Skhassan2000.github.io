@@ -67,12 +67,20 @@ function displayRepositories(repos) {
  */
 function searchUser() {
     // Get the username entered by the user
-    const username = document.getElementById("username").value.trim();
+    const usernameInput = document.getElementById("username").value.trim();
 
-    // Check if the input is not empty
-    if (username) {
-        fetchRepositories(username);
-    } else {
-        alert("Please enter a GitHub username!");
-    }
+    // Set a default username if input is empty
+    const username = usernameInput || "Skhassan2000";  // Default username is Skhassan2000
+
+    // Fetch repositories for the given username
+    fetchRepositories(username);
 }
+
+// Automatically fetch repositories for the default username on page load
+window.onload = () => {
+    // Set the default username in the input field
+    document.getElementById("username").value = "Skhassan2000";
+    
+    // Fetch repositories for the default username
+    searchUser();
+};
