@@ -47,7 +47,7 @@ function resetGame() {
     
     // Reset UI
     choices.forEach(choice => choice.classList.remove('selected'));
-    computerImg.src = 'question-mark.PNG';
+    computerImg.src = 'question-mark.png';
     computerCaption.textContent = 'Computer is waiting...';
     resultText.textContent = 'Make your choice to start the game!';
     resultText.className = '';
@@ -81,7 +81,7 @@ function shuffleComputerChoice() {
     shuffleInterval = setInterval(() => {
         // Get a random choice for the shuffle animation
         const randomChoice = options[Math.floor(Math.random() * 3)];
-        computerImg.src = `${randomChoice}.PNG`;
+        computerImg.src = `${randomChoice}.png`;
         computerCaption.textContent = 'Thinking...';
         
         // Check if we've reached the 3-second mark
@@ -92,7 +92,7 @@ function shuffleComputerChoice() {
             
             // Make the final random choice
             computerChoice = getRandomChoice();
-            computerImg.src = `${computerChoice}.PNG`;
+            computerImg.src = `${computerChoice}.png`;
             computerCaption.textContent = `Computer chose ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
             
             // Determine the winner
